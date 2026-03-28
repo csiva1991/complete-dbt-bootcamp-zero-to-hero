@@ -6,10 +6,10 @@ jobs:
   devcontainer:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Build and test devcontainer
         uses: devcontainers/ci@v0.3
         with:
           push: never
-          runCmd: .venv/bin/dbt --version
+          runCmd: dbt --version
